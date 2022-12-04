@@ -18,6 +18,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'hdima/python-syntax'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-scripts/bash-support.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'godlygeek/tabular'
 
 call plug#end()
 

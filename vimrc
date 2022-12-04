@@ -238,3 +238,23 @@ let g:jsx_ext_required = 0
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+set encoding=UTF-8
+
+let g:github_function_style = "italic"
+let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:github_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+colorscheme github_dark_default
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

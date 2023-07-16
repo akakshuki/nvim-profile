@@ -77,7 +77,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+          git
+          zsh-autosuggestions 
+          zsh-syntax-highlighting
+          z
+        )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,6 +115,8 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
 alias vim="nvim"
 alias reload='source ~/.zshrc'
 
@@ -117,7 +124,8 @@ alias gsync="git checkout master && git fetch upstream && git rebase upstream/ma
 alias glog='git log --graph --oneline --decorate --all'
 alias cls='clear'
 alias cdcode='cd /Volumes/worker/Code'
-
+alias docker-compose='docker compose'
+alias k='kubectl'
 export PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[pink]%}%D{%T}%{$reset_color%} [$(whoami)] %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}'
 
 # Setting ag as the default source for fzf
@@ -130,3 +138,10 @@ source ~/.zshrc.local
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+source /Users/macbook1/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

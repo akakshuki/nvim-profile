@@ -126,6 +126,7 @@ alias cls='clear'
 alias cdcode='cd /Volumes/worker/Code'
 alias docker-compose='docker compose'
 alias k='kubectl'
+alias tf='terraform'
 export PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[pink]%}%D{%T}%{$reset_color%} [$(whoami)] %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}'
 
 # Setting ag as the default source for fzf
